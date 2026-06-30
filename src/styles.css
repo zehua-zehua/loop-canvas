@@ -183,6 +183,32 @@ button:disabled {
   overflow: hidden;
 }
 
+.embed-mode header {
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 16px;
+}
+
+.embed-mode header > div:nth-child(2) {
+  flex: 1 1 560px;
+}
+
+.embed-mode header > div:last-child {
+  flex: 1 1 100%;
+  justify-content: flex-start;
+}
+
+.embed-mode header h1.truncate {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  line-height: 1.25;
+}
+
+.embed-mode header .line-clamp-2 {
+  -webkit-line-clamp: 3;
+}
+
 @media (max-width: 1180px) {
   header {
     align-items: flex-start;

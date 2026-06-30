@@ -38,6 +38,7 @@ const loadWorkspace = (): WorkspaceState => {
 };
 
 function App() {
+  const isEmbedded = new URLSearchParams(window.location.search).has("embed");
   const [workspace, setWorkspace] = useState<WorkspaceState>(loadWorkspace);
   const [selection, setSelection] = useState<Selection>({
     type: "task",
@@ -619,7 +620,7 @@ function App() {
   };
 
   return (
-    <div className="app-shell flex h-screen min-h-[760px] flex-col overflow-hidden bg-canvas text-slate-950">
+    <div className={`app-shell ${isEmbedded ? "embed-mode" : ""} flex h-screen min-h-[760px] flex-col overflow-hidden bg-canvas text-slate-950`}>
       <GoalBar
         goal={workspace.goal}
         onExport={handleExportJson}
