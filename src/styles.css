@@ -184,6 +184,21 @@ button:disabled {
 }
 
 @media (max-width: 1180px) {
+  header {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 16px;
+  }
+
+  header > div:nth-child(2) {
+    flex: 1 1 560px;
+  }
+
+  header > div:last-child {
+    flex: 1 1 100%;
+    justify-content: flex-start;
+  }
+
   .app-shell {
     height: auto;
     min-height: 100vh;
