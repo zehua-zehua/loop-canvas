@@ -59,6 +59,10 @@ http://127.0.0.1:5173/?reset=1
 npm run build
 ```
 
+## Live Prototype
+
+Interactive prototype: https://zehua-zehua.github.io/loop-canvas/
+
 ## Project Structure
 
 ```text
